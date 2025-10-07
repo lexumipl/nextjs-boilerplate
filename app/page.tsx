@@ -29,7 +29,19 @@ export default function Home() {
     }
   }
 
-  return (
+  return (<header style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"12px 0"}}>
+  <strong>lexumi</strong>
+  <SignedOut>
+    <Link href="/sign-in">Zaloguj</Link>
+  </SignedOut>
+  <SignedIn>
+    <div style={{display:"flex",gap:12,alignItems:"center"}}>
+      <Link href="/dashboard">Panel</Link>
+      <UserButton />
+    </div>
+  </SignedIn>
+</header>
+
     <main style={{ maxWidth: 720, margin: "40px auto", padding: 16 }}>
       <h1 style={{ marginBottom: 8 }}>lexumi — asystent prawny (MVP)</h1>
       <p style={{ opacity: 0.8, marginBottom: 16 }}>
